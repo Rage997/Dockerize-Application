@@ -1,7 +1,7 @@
-# Dockerize-Application: A docker Image template to Dockerize any application
+# A docker Image template to Dockerize any application
 
 
-<p float="middle">
+<p align="center">
   <img src="./images/example.png" width="500" />
 </p>
 
