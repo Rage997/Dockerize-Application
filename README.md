@@ -17,7 +17,7 @@ You can build all you need by running:
 
 Now you need to edit APP_USERNAME inside docker-compose.yml with your desired username. The next step is to generate an APP_PASSWORD_HASH by running with password 'mypass' of your choice:
 
-    ```docker run --rm -it vnc-caddy caddy hash-password -plaintext 'mypass'```
+```docker run --rm -it vnc-caddy caddy hash-password -plaintext 'mypass'```
 
 Paste the output of the above command into APP_PASSWORD_HASH and you are set to go.
 
