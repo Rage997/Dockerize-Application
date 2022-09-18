@@ -1,4 +1,4 @@
-# A docker Image template to Dockerize any application
+# A docker image template to Dockerize any application
 
 
 <p align="center">
@@ -6,7 +6,7 @@
 </p>
 
 
-This repository contains a Docker image of an Ubuntu container running Thunderbird and Gimp. It's meant as a template to show the process of Dockerize any application. Go to <q>How to Dockerize a different application</q> section to see how you can Dockerize another application.
+This repository contains a Docker image of an Ubuntu container running Thunderbird and Gimp. It's meant to be used as a template to show how you can Dockerize any application. Go to <q>How to Dockerize a different application</q> section to see how you can Dockerize another application.
 
 # Installation
 
@@ -59,13 +59,13 @@ In short, the Caddyfile proxies the root directory to the vnc-app container you 
    
     ```docker run --detach --restart=always --volume=vnc-data:/data --net=vnc-net --name=vnc-web --env=APP_USERNAME="myuser" --env=APP_PASSWORD_HASH="mypass-hash" --publish=8080:8080 vnc-caddy```
 
-## How to connect
+# How to connect
 
 Open a new broswer tab and tap ```http://your_server_ip:8080```. You should see a login page. Login with the user and password used when building the Caddy container.
 
 You can also access files by opening ```http://your_server_ip:8080/files```
 
-## How to Dockerize a different application
+# How to Dockerize a different application
 
 If you want to containerize a different application, follow these steps:
 
