@@ -1,6 +1,5 @@
 # A docker image template to Dockerize any application
 
-
 <p align="center">
   <img src="./images/example.png" width="500" />
 </p>
@@ -15,6 +14,12 @@ This repository contains a Docker image of an Ubuntu container running Thunderbi
 You can build all you need by running:
 
 ```docker compose build```
+
+Now you need to edit APP_USERNAME inside docker-compose.yml with your desired username. The next step is to generate an APP_PASSWORD_HASH by running with password 'mypass' of your choice:
+
+    ```docker run --rm -it vnc-caddy caddy hash-password -plaintext 'mypass'```
+
+Paste the output of the above command into APP_PASSWORD_HASH and you are set to go.
 
 Then start the containers with:
 
