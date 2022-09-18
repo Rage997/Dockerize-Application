@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+  vnc-app:
+    build: .
+    restart: always
+    volumes:
+      - 'vnc-data:/data'
+    network_mode: vnc-net
+    container_name: vnc-app
+    image: vnc-app
+
+  vnc-caddy:
+    build: ./caddy
+    restart: always
+    volumes:
+      - 'vnc-data:/data'
+    network_mode: vnc-net
+    container_name: vnc-web
+    environment:
+      - APP_USERNAME=myuser
+      - APP_PASSWORD_HASH="mypass-hash"
+    ports:
+      - '8080:8080'
+    image: vnc-caddy
+
+volumes:
+  vnc-data:
+networks:
+  vnc-net:

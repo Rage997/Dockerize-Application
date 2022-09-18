@@ -8,8 +8,19 @@
 
 This repository contains a Docker image of an Ubuntu container running Thunderbird and Gimp. It's meant as a template to show the process of Dockerize any application. Go to <q>How to Dockerize a different application</q> section to see how you can Dockerize another application.
 
-## Installation
+# Installation
 
+## Docker compose (WIP)
+
+You can build all you need by running:
+
+```docker compose build```
+
+Then start the containers with:
+
+```docker compose up```
+
+## Manual build
 ### How to build and run the application container
 
 I decided to call the image vnc-docker, this is an arbitrary choice. Build the container by running:
